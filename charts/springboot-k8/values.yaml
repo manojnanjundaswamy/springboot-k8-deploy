@@ -1,0 +1,8 @@
+replicaCount: 1
+image:
+  repository: youracr.azurecr.io/springboot-k8
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 8080
