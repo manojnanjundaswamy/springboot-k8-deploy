@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: youracr.azurecr.io/springboot-k8
+  repository: springbootk8.azurecr.io/springboot-k8
   tag: latest
   pullPolicy: IfNotPresent
 service:
