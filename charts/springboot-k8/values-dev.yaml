@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
   tag: 17
-
+name: springboot-k8-dev
 service:
   type: ClusterIP
   port: 8080
