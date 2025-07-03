@@ -8,14 +8,14 @@ spec:
   rules:
     - http:
         paths:
-{{/*          - path: /prod*/}}
-{{/*            pathType: Prefix*/}}
-{{/*            backend:*/}}
-{{/*              service:*/}}
-{{/*                name: {{ .Chart.Name }}-prod*/}}
-{{/*                port:*/}}
-{{/*                  number: 8080*/}}
-          - path: /
+          - path: /prod
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Chart.Name }}-prod
+                port:
+                  number: 8080
+          - path: /dev
             pathType: Prefix
             backend:
               service:
