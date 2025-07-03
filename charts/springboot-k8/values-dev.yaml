@@ -6,12 +6,12 @@ namespace: app-dev
 name: springboot-k8-dev
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8080
 
 
 ingressDev:
-  enabled: true
+  enabled: false
 ingressProd:
   enabled: false
 ingress:

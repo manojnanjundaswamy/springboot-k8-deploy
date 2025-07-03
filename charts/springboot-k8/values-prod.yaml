@@ -1,15 +1,15 @@
 replicaCount: 4
 image:
   tag: 19
-namespace: app-dev
+namespace: app
 name: springboot-k8-prod
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8080
 
 ingressDev:
   enabled: false
 ingressProd:
-  enabled: true
+  enabled: false
 ingress:
   version: networking.k8s.io/v1-prod
