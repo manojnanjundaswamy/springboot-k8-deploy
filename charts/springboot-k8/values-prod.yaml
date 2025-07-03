@@ -1,3 +1,8 @@
-replicaCount: 2
+replicaCount: 14
 image:
   tag: 17
+
+
+service:
+  type: LoadBalancer
+  port: 8080

@@ -1,11 +1,8 @@
 replicaCount: 3
 image:
   repository: springbootk8.azurecr.io/springboot-k8
-  tag: 14
+  tag: latest
   pullPolicy: IfNotPresent
-service:
-  type: ClusterIP
-  port: 8080
 
 
 
