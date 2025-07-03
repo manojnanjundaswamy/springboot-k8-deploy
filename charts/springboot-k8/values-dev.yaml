@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
   tag: 19
-
+namespace: app-dev
 name: springboot-k8-dev
 service:
   type: ClusterIP
