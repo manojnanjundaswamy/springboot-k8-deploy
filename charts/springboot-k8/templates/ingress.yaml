@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v2
 kind: Ingress
 metadata:
   name: {{ .Chart.Name }}-ingress
@@ -8,14 +8,14 @@ spec:
   rules:
     - http:
         paths:
-          - path: /prod
-            pathType: Prefix
-            backend:
-              service:
-                name: {{ .Chart.Name }}-prod
-                port:
-                  number: 8080
-          - path: /dev
+{{/*          - path: /prod*/}}
+{{/*            pathType: Prefix*/}}
+{{/*            backend:*/}}
+{{/*              service:*/}}
+{{/*                name: {{ .Chart.Name }}-prod*/}}
+{{/*                port:*/}}
+{{/*                  number: 8080*/}}
+          - path: /
             pathType: Prefix
             backend:
               service:
