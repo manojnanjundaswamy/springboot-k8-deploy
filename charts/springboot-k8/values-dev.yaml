@@ -1,6 +1,6 @@
 replicaCount: 2
 image:
-  tag: 17
+  tag: 18
 
 service:
   type: ClusterIP
