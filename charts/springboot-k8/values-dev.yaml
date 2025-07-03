@@ -1,10 +1,18 @@
 replicaCount: 2
+
 image:
   tag: 19
 namespace: app-dev
 name: springboot-k8-dev
+
 service:
   type: ClusterIP
   port: 8080
-  ingress:
+
+
+ingressDev:
+  enabled: true
+ingressProd:
+  enabled: false
+ingress:
     version: networking.k8s.io/v1-dev
