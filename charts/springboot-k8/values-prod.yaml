@@ -1,8 +1,7 @@
-replicaCount: 14
+replicaCount: 4
 image:
   tag: 17
 
-
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 8080
