@@ -24,23 +24,23 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              cpu: "250m"
-              memory: "512Mi"
+              cpu: {{ .Values.containers.resources.requests.cpu }}
+              memory: {{ .Values.containers.resources.requests.memory }}
             limits:
-              cpu: "500m"
-              memory: "1Gi"
+              cpu: {{ .Values.containers.resources.limits.cpu }}
+              memory: {{ .Values.containers.resources.limits.memory }}
           readinessProbe:
               httpGet:
-                path: /actuator/health
-                port: 8080
-              initialDelaySeconds: 10
-              periodSeconds: 10
+                path: {{ .Values.containers.readinessProbe.httpGet.path }}
+                port: {{ .Values.containers.readinessProbe.httpGet.port }}
+              initialDelaySeconds: {{ .Values.containers.readinessProbe.initialDelaySeconds }}
+              periodSeconds: {{ .Values.containers.readinessProbe.periodSeconds }}
           livenessProbe:
               httpGet:
-                path: /actuator/health
-                port: 8080
-              initialDelaySeconds: 30
-              periodSeconds: 15
+                path: {{ .Values.containers.livenessProbe.httpGet.path }}
+                port: {{ .Values.containers.livenessProbe.httpGet.port }}
+              initialDelaySeconds: {{ .Values.containers.livenessProbe.initialDelaySeconds }}
+              periodSeconds: {{ .Values.containers.livenessProbe.periodSeconds }}
           env:
             - name: POD_NAME
               valueFrom:
