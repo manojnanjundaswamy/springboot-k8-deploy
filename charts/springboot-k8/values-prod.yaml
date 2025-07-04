@@ -17,11 +17,11 @@ ingress:
 containers:
   resources:
     requests:
-      cpu: "250m"
-      memory: "200Mi"
-    limits:
-      cpu: "250m"
+      cpu: "500m"
       memory: "500Mi"
+      limits:
+        cpu: "1000m"
+        memory: "1Gi"
   readinessProbe:
     httpGet:
       path: /actuator/health
