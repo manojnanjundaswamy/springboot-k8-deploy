@@ -1,6 +1,6 @@
 replicaCount: 4
 image:
-  tag: 19
+  tag: 20
 namespace: app
 name: springboot-k8-prod
 service:
