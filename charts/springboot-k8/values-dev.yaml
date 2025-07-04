@@ -1,7 +1,7 @@
 replicaCount: 3
 
 image:
-  tag: 21
+  tag: 22
 namespace: app-dev
 name: springboot-k8-dev
 
