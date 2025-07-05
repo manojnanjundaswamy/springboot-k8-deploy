@@ -5,6 +5,7 @@ metadata:
   namespace: {{.Values.namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: {{ .Values.name }}
